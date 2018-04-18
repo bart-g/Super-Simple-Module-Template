@@ -1,5 +1,5 @@
 //
-//  Copyright © {% now 'local', '%Y' %} auraspace. All rights reserved.
+//  Copyright © {% now 'local', '%Y' %} {{ cookiecutter.company_name }}. All rights reserved.
 //
 
 import UIKit

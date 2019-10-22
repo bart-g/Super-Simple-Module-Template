@@ -4,7 +4,11 @@
 
 import UIKit
 
-protocol {{ cookiecutter.module_name }}Presenting: class {}
+struct {{ cookiecutter.module_name }}Renderable {}
+
+protocol {{ cookiecutter.module_name }}Rendering: AnyObject {
+    func render(_ {{ cookiecutter.module_name[0]|lower + cookiecutter.module_name[1:] }}Renderable: {{ cookiecutter.module_name }}Renderable)
+}
 
 final class {{ cookiecutter.module_name }}ViewController: UIViewController {
     
@@ -20,5 +24,9 @@ final class {{ cookiecutter.module_name }}ViewController: UIViewController {
     }
 }
 
-extension {{ cookiecutter.module_name }}ViewController: {{ cookiecutter.module_name }}Presenting {}
+extension {{ cookiecutter.module_name }}ViewController: {{ cookiecutter.module_name }}Rendering {
+    func render(_ {{ cookiecutter.module_name[0]|lower + cookiecutter.module_name[1:] }}Renderable: {{ cookiecutter.module_name }}Renderable) {
+        
+    }
+}
 
